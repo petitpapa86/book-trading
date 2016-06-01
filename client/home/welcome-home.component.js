@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-let WelcomeHomeComponent = class {
+let WelcomeHomeComponent = class WelcomeHomeComponent {
 };
 WelcomeHomeComponent = __decorate([
     core_1.Component({

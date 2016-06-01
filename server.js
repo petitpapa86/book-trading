@@ -13,20 +13,16 @@ var app = express();
 var server = http.createServer(app);
 
 app.use(logger('dev'));
-console.log(__dirname);
-app.use(path.join('/node_modules/'), express.static(path.join(__dirname, '/book-trading/', '../node_modules/')));
-app.use('/client/', express.static(path.join(__dirname, '/book-trading/', '../client/')));
-app.use('/systemjs.config.js', express.static(path.join(__dirname, '/book-trading/', '../systemjs.config.js')));
 
-console.log(__dirname);
+app.use('/node_modules/', express.static(path.join(__dirname, '/node_modules/')));
+app.use('/client/', express.static(path.join(__dirname, '/client/')));
+app.use('/systemjs.config.js', express.static(path.join(__dirname, '/systemjs.config.js')));
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname,'/book-trading', '../index.html'));
+    res.sendFile(path.join(__dirname, '/index.html'));
 });
-
-
 
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
   var addr = server.address();
-  console.log("Chat server listening at", addr.address + ":" + addr.port);
+  console.log("Book Trading server listening at", addr.address + ":" + addr.port);
 });

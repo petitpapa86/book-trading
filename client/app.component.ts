@@ -1,15 +1,29 @@
 import { Component} from '@angular/core';
 import {WelcomeHomeComponent} from './home/welcome-home.component';
-import {RouteConfig, ROUTER_PROVIDERS, ROUTER_DIRECTIVES} from '@angular/router';
+import {Routes, ROUTER_PROVIDERS, ROUTER_DIRECTIVES} from '@angular/router';
 @Component({
     selector: 'my-app',
-    templateUrl:'client/app.component.html',
+    template:`
+    	<div class='page'>
+        <nav>
+            <div>
+                <a>{{pageTitle}}</a>
+                <ul>
+                    <li><a [routerLink]="['/home']">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+     </div>
+    `,
     directives:[ROUTER_DIRECTIVES],
     providers: [ROUTER_PROVIDERS]
 })
-@RouteConfig([
-    {path:'/', name:'Home' component: WelcomeHomeComponent, useAsDefault: true}
-    {path:'/home', name:"Home", component: WelcomeHomeComponent}
+@Routes([
+   
+    {path:'/home', component: WelcomeHomeComponent}
 ])
 export class AppComponent{
   pageTitle: string = 'Book Trading';

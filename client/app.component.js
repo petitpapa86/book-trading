@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 const core_1 = require('@angular/core');
 const welcome_home_component_1 = require('./home/welcome-home.component');
 const router_1 = require('@angular/router');
-let AppComponent = class {
+let AppComponent = class AppComponent {
     constructor() {
         this.pageTitle = 'Book Trading';
     }
@@ -19,13 +19,26 @@ let AppComponent = class {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        templateUrl: 'client/app.component.html',
+        template: `
+    	<div class='page'>
+        <nav>
+            <div>
+                <a>{{pageTitle}}</a>
+                <ul>
+                    <li><a [routerLink]="['/home']">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+     </div>
+    `,
         directives: [router_1.ROUTER_DIRECTIVES],
         providers: [router_1.ROUTER_PROVIDERS]
     }),
-    router_1.RouteConfig([
-        { path: '/', name: 'Home', component: welcome_home_component_1.WelcomeHomeComponent, useAsDefault: true },
-        { path: '/home', name: "Home", component: welcome_home_component_1.WelcomeHomeComponent }
+    router_1.Routes([
+        { path: '/home', component: welcome_home_component_1.WelcomeHomeComponent }
     ]), 
     __metadata('design:paramtypes', [])
 ], AppComponent);
