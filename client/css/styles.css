@@ -2,17 +2,95 @@
     margin: 0;
     padding: 0;
 }
-
+*, *:before, *:after{
+	box-sizing: border-box;
+}
 body{
     font-family: "Ubuntu", "Monaco", "Lucida Console";
     font-size:16px;
 }
 .page{
-   width:90%;
+   width: 1000px;
    margin:auto;
+   position: relative;
+}
+nav{
+	border-radius: 8px;
+	position: relative;
+	background-color: #3D3939;
+	margin-bottom: 20px;
+	height: 8em;
+	color: yellow;
+	top: 25px;
+}
+nav li a{
+	color: black;
+}
+#left-nav li{
+	padding: 4px 6px;
+	margin: 4px;
+	border-right: 1px solid black;
+}
+#left-nav li:last-child{
+	border-right: 0px;
+}
+ul{
+	list-style-type: none;
+}
+li{
+	display: inline-block;
+	padding: 10px 8px;
+}
+
+#brand{
+	font-size: 30px;
+	position:relative;;
+	top: 20px;
+	margin-left: 10px;
+}
+#left-nav{
+	position: relative;
+	background-color: #FFCC00;
+	float: right;
+	margin-right: 30px;
+	border-radius: 6px;
+	top:4px;
+}
+#features{
+	position: relative;
+	left:10px;
+	top:15px;
+}
+#features li{
+	color: white;
+	border-right: 1px solid yellow;
+	line-height: 6px;
+	float: left;
+	font-size: .8em;
+}
+#features li:last-child{
+	border-right: 0px;
+}
+.search{
+	float:right;
+	border:none;
+	margin-right: 20px;
+	border-radius: 4px;
+	height: 1.5em;
 }
 .content{
     margin-top: 15px;
+}
+footer{
+	background-color: gray;
+	border-radius: 6px;
+	padding: 10px;
+	position: relative;
+}
+.label{
+	display: inline-block;
+	width: 150px;
+	color: blue;
 }
 
 @font-face{

@@ -13,7 +13,8 @@ let WelcomeHomeComponent = class WelcomeHomeComponent {
 };
 WelcomeHomeComponent = __decorate([
     core_1.Component({
-        templateUrl: './welcome.component.html'
+        templateUrl: '/client/home/welcome.component.html',
+        styleUrls: ['client/home/welcome-home.css']
     }), 
     __metadata('design:paramtypes', [])
 ], WelcomeHomeComponent);

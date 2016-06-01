@@ -1,0 +1,26 @@
+
+article{
+	display: inline-block;
+	height: 450px
+}
+.left-sidebar{
+	width: 30%;
+	float:left;
+	background-color: #E0E0E0;
+	padding: 10px 8px
+}
+.col-main{
+	width: 50%;
+	float: left;
+}
+.book-section{
+	margin: 2em;
+}
+.box-image{
+	top: 30%;
+	left: 50%;
+	width: 96px;
+	position: relative;
+	background-color: gray;
+	height: 96px
+}

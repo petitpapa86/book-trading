@@ -24,21 +24,37 @@ AppComponent = __decorate([
         <nav>
                 <a id="brand">{{pageTitle}}</a>
                 <ul id="left-nav">
+
                     <li><a [routerLink]="['/home']">Home</a></li>
                     <li><a href="javascript:void()">Register</a></li>
                     <li><a href="javascript:void">login</a></li>
                 </ul>
+                <div id="features">
+                    <h2 style="float:left">Trading:</h2> 
+                    <li> Catalogue your books</li>
+                    <li> show all books</li>
+                    <li>borrow other user's book</li>
+                    <li> Manage your books and request from Dashboard</li>
+                    <input class="search" type="text" /> 
+                </div>
+               
+              
         </nav>
-        <div class="content">
+        <div class="content" >
             <router-outlet></router-outlet>
         </div>
+        <footer>
+        <p><span class="label">Project developped by</span>: &nbsp; &nbsp; <em style="font-size:18px;font-weight:bold">Alseny Cissé</em></p>
+        <p><span class="label">Email</span>: &nbsp; &nbsp;  alsenicisse@gmail.com</p>
+        <p><span class="label">GitHub</span>: &nbsp; &nbsp;    </p> 
+        </footer>
      </div>
     `,
         directives: [router_1.ROUTER_DIRECTIVES],
         providers: [router_1.ROUTER_PROVIDERS]
     }),
     router_1.Routes([
-        { path: '/home', component: welcome_home_component_1.WelcomeHomeComponent }
+        { path: '/', component: welcome_home_component_1.WelcomeHomeComponent }
     ]), 
     __metadata('design:paramtypes', [])
 ], AppComponent);
