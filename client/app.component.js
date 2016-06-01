@@ -20,16 +20,16 @@ AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
         template: `
-    	<div class='page'>
+    	<div class="page">
         <nav>
-            <div>
-                <a>{{pageTitle}}</a>
-                <ul>
+                <a id="brand">{{pageTitle}}</a>
+                <ul id="left-nav">
                     <li><a [routerLink]="['/home']">Home</a></li>
+                    <li><a href="javascript:void()">Register</a></li>
+                    <li><a href="javascript:void">login</a></li>
                 </ul>
-            </div>
         </nav>
-        <div>
+        <div class="content">
             <router-outlet></router-outlet>
         </div>
      </div>

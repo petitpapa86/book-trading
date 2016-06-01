@@ -11,6 +11,9 @@ body{
    width:90%;
    margin:auto;
 }
+.content{
+    margin-top: 15px;
+}
 
 @font-face{
     font-family: "Ubuntu";
