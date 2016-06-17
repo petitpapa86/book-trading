@@ -30,15 +30,15 @@ AppComponent = __decorate([
                     <li><a href="javascript:void">login</a></li>
                 </ul>
                 <div id="features">
-                    <h2 style="float:left">Trading:</h2> 
+                    <h2 style="float:left">Trading:</h2>
                     <li> Catalogue your books</li>
                     <li> show all books</li>
                     <li>borrow other user's book</li>
                     <li> Manage your books and request from Dashboard</li>
-                    <input class="search" type="text" /> 
+                    <input class="search" type="text" />
                 </div>
-               
-              
+
+
         </nav>
         <div class="content" >
             <router-outlet></router-outlet>
@@ -46,7 +46,7 @@ AppComponent = __decorate([
         <footer>
         <p><span class="label">Project developped by</span>: &nbsp; &nbsp; <em style="font-size:18px;font-weight:bold">Alseny Cissé</em></p>
         <p><span class="label">Email</span>: &nbsp; &nbsp;  alsenicisse@gmail.com</p>
-        <p><span class="label">GitHub</span>: &nbsp; &nbsp;    </p> 
+        <p><span class="label">GitHub</span>: &nbsp; &nbsp; <a href="https://github.com/petitpapa86">https://github.com/petitpapa86</a> </p> 
         </footer>
      </div>
     `,
